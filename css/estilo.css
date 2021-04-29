@@ -177,3 +177,69 @@ header {
 			float: left;
 			width: 50%;
 		}
+		
+		.container{ 
+			margin: 0 auto;/*Centraliza o conteúdo na tela*/
+			max-width: 1200px;/*define tam máx de 1200px*/
+		}
+
+		.logo,
+		.secao {/*configura espaço gráfico usando porcentagens*/
+			padding: 0 1%;
+		}
+
+		img {
+			max-width: 100%;/*impede a imagem de vazar para além dos containers*/
+		}
+
+		/*redimenciona os blocos caso não caiba +1 caracter na linha, a palavra escorrega pra linha de baixo*/
+		.logo,
+		.busca,
+		.barra-nav,
+		.menu-principal {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.menu-principal li {
+			float: left;
+		}
+
+		/*ajusta o texto proporcionalmente usando medidas "em"*/
+		header {
+			padding: 0.5em 0;
+		}
+		.destaques {
+			margin-top: 1em;
+		}
+		.barra-nav {
+			margin: 0.4em 0;
+		}
+
+		/*aumenta a fonte proporcionalmente em telas maiores*/
+		@media (min-width: 600px) {
+			html {
+				font-size: 1.125em;
+			}
+		}
+		@media (min-width: 1000px) {
+			html {
+				font-size: 1.25em;
+			}
+		}
+
+		/*dispara colunas c/ tamanhos diferentes, dependo do tamanho da tela*/
+		.secao {
+			width: 100%;
+		}
+		
+		@media (min-width: 600px) {
+			.secao {
+				width: 50%;
+			}
+		}
+		@media (min-width: 1000px) {
+			.secao {
+				width: 33.333%;
+			}
+		}
+		
