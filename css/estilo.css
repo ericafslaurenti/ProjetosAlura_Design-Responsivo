@@ -242,4 +242,117 @@ header {
 				width: 33.333%;
 			}
 		}
-		
+		@media (max-width: 600px) {
+    .barra-nav {
+        background: #f0f0f0;
+        padding: 1em;
+        margin: 0;
+
+        height: 100%;
+        width: 90%;
+        max-width: 320px;
+
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -90%;
+
+        transition: left 0.3s ease-out;
+    }
+        .menu-ativo .barra-nav {
+            left: 0;
+        }
+
+    .menu-principal li {
+        padding: 1em 0;
+        width: 100%;
+    }
+}
+/*posiciona o menu lateralmente(fora da tela)*/
+@media (max-width: 600px) {
+    .barra-nav {
+        background: #f0f0f0;
+        padding: 1em;
+        margin: 0;
+
+        height: 100%;
+        width: 90%;
+        max-width: 320px;
+
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -90%;
+
+        transition: left 0.3s ease-out;
+    }
+        .menu-ativo .barra-nav {
+            left: 0;
+        }
+
+    .menu-principal li {
+        padding: 1em 0;
+        width: 100%;
+    }
+}
+
+/*esconde os botões do menu qdo estiver acessando no desktop*/
+@media not all and (max-width: 600px) {
+    .menu-abrir,
+    .menu-fechar {
+        display: none;
+    }    
+}
+/*cria um fundo cinza na página, p/ obscurecer o conteudo*/
+@media (max-width: 600px) {
+    .menu-ativo:after {
+        content: "";
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background: rgba(0,0,0,0.4);
+    }
+}
+/*altera o menu*/
+.menu-abrir,
+.menu-fechar {
+    background: none;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    font-size: 1.6em;
+    text-indent: -999em;
+}
+
+.menu-abrir {
+    height: 0;
+    width:.75em;
+    padding-top:.125em;
+    border-top: .375em double #000;
+    border-bottom: .125em solid #000;
+
+    vertical-align: middle;
+    margin: 0.5em;    
+}
+
+.menu-fechar {
+    position: relative;
+    height: 1em;
+    width: 1em;
+}
+    .menu-fechar:before {
+        content: '\00D7';
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+    }
+	/*Tamanho do log em relação a página*/
+	.logo img {
+		width: 200px;
+	}
